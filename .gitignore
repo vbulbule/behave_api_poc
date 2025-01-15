@@ -1,3 +1,5 @@
 .env
 allure-html
 allure-results
+.idea
+.venv
