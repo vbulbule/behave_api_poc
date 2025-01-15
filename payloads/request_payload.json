@@ -1,0 +1,12 @@
+{
+    "messages": [
+     {
+      "role": "system",
+      "content": "you are a helpful assistant that answers questions professonally"
+     },
+     {
+      "role": "user",
+      "content": "list all the java keywords"
+     }
+    ]
+   }

@@ -1,0 +1,4 @@
+behave
+requests
+python-dotenv
+allure-behave
