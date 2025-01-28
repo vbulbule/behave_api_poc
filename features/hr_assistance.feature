@@ -1,8 +1,8 @@
-Feature: Verify OpenAI API Responses
+Feature: Verify HR Assistance Responses
 
-  Scenario: Verify status code of OpenAI API response
-    Given I set the OpenAI API endpoint
-    And I set the request payload as follows
+  Scenario: Verify status code of HR Assistance
+    Given I set the HR Assistance
+    And I ask Question as follows
       """
       {
           "messages": [
@@ -17,12 +17,12 @@ Feature: Verify OpenAI API Responses
           ]
       }
       """
-    When I send a POST request to the OpenAI API
+    When I send a POST request to the HR Assistance API
     Then the response status code should be 200
 
-  Scenario: Verify content in OpenAI API response
-    Given I set the OpenAI API endpoint
-    And I set the request payload as follows
+  Scenario: Verify content in HR Assistance
+    Given I set the HR Assistance
+    And I ask Question as follows
       """
       {
           "messages": [
@@ -37,6 +37,6 @@ Feature: Verify OpenAI API Responses
           ]
       }
       """
-    When I send a POST request to the OpenAI API
+    When I send a POST request to the HR Assistance API
     Then the response status code should be 200
-    Then the response should contain the text "default"
+    Then the agent response should contain the text "default"

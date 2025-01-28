@@ -1,4 +1,5 @@
-behave
-requests
-python-dotenv
+behave~=1.2.6
+requests~=2.32.3
+python-dotenv~=1.0.1
 allure-behave
+allure-python-commons~=2.13.5

@@ -18,7 +18,6 @@ HEADERS = {
 
 
 @given('I set the OpenAI API endpoint')
-#@allure.step("Setting the OpenAI API endpoint")
 def step_set_api_endpoint(context):
     context.api_url = API_URL
     context.headers = HEADERS
@@ -33,7 +32,6 @@ def step_set_api_endpoint(context):
 #     context.response = response    
 
 @given(u'I set the request payload as follows')
-#@allure.step("Setting the request payload")
 def step_set_request_payload(context):
     text = context.text.strip()
     context.payload = json.loads(text)
@@ -41,7 +39,6 @@ def step_set_request_payload(context):
 
 
 @when('I send a POST request to the OpenAI API')
-#@allure.step("Sending a POST request to the OpenAI API")
 def step_send_post_request(context):
     response = requests.post(context.api_url, headers=context.headers, json=context.payload)
     context.response = response
@@ -51,7 +48,6 @@ def step_send_post_request(context):
     allure.attach(json.dumps(response.json(), indent=2), name="Response Content", attachment_type=allure.attachment_type.JSON)
 
 @then('the response status code should be {expected_status_code:d}')
-#@allure.step("Verifying the response status code")
 def step_verify_status_code(context, expected_status_code):
     actual_status_code = context.response.status_code
     assert actual_status_code == expected_status_code, (
@@ -59,7 +55,7 @@ def step_verify_status_code(context, expected_status_code):
     )
     allure.attach(f"Expected: {expected_status_code}\nActual: {actual_status_code}", name="Status Code Verification", attachment_type=allure.attachment_type.TEXT)
 
-#@allure.step("Verifying the content in the response")
+
 @then('the response should contain the text "{expected_text}"')
 def step_verify_response_content(context,expected_text):
     response_json = context.response.json()
