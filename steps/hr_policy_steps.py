@@ -13,12 +13,12 @@ def step_api_endpoint_is_available(context):
     assert response.status_code == 200, "API endpoint is not available"
 
 
-@when('the user sends a query "{query}"')
-def step_user_sends_query(context, query):
-    context.query = query
-    payload = {"query": query}
-    headers = {"Content-Type": "application/json"}
-    context.response = requests.post(context.endpoint, data=json.dumps(payload), headers=headers)
+# @when('the user sends a query "{query}"')
+# def step_user_sends_query(context, query):
+#     context.query = query
+#     payload = {"query": query}
+#     headers = {"Content-Type": "application/json"}
+#     context.response = requests.post(context.endpoint, data=json.dumps(payload), headers=headers)
 
 
 @then('the response should contain "{expected_text}"')

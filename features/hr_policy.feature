@@ -35,8 +35,8 @@ Feature: Verify HR Policy API responses
 
     Examples:
       | query                                           | thai_response                                     | english_response                                   |
-      | Flexible benefits คืออะไร                       | สวัสดิการแบบยืดหยุ่น (Flexible Benefits) หมายถึง... | Flexible Benefits means flexible health benefits |
-      | พนักงานสามารถใช้ flexible benefits กับอะไรได้บ้าง | สวัสดิการแบบยืดหยุ่น...                      | Flexible Benefits can be used to cover health   |
+      | Flexible benefits คืออะไร                         | สวัสดิการแบบยืดหยุ่น (Flexible Benefits) หมายถึง... | Flexible Benefits means flexible health benefits |
+      | พนักงานสามารถใช้ flexible benefits กับอะไรได้บ้าง       | สวัสดิการแบบยืดหยุ่น...                      | Flexible Benefits can be used to cover health   |
 
   Scenario: Verify response time for API queries
     Given the API endpoint is available
